@@ -1,0 +1,183 @@
+import { Item, User, Recommendation, ModelInfo } from '@/types/recommendation';
+
+export const mockItems: Item[] = [
+  {
+    id: '1',
+    title: 'Toy Story',
+    year: 1995,
+    category: 'Movie',
+    genres: ['Animation', 'Adventure', 'Comedy'],
+    description: 'A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him.',
+    popularity: 92,
+    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=600&fit=crop',
+  },
+  {
+    id: '2',
+    title: 'Jumanji',
+    year: 1995,
+    category: 'Movie',
+    genres: ['Action', 'Adventure', 'Family'],
+    description: 'Two kids find and play a magical board game that brings the jungle to life.',
+    popularity: 88,
+    imageUrl: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&h=600&fit=crop',
+  },
+  {
+    id: '3',
+    title: 'Heat',
+    year: 1995,
+    category: 'Movie',
+    genres: ['Action', 'Crime', 'Drama'],
+    description: 'A group of professional bank robbers start to feel the heat from police.',
+    popularity: 85,
+    imageUrl: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop',
+  },
+  {
+    id: '4',
+    title: 'The Matrix',
+    year: 1999,
+    category: 'Movie',
+    genres: ['Action', 'Sci-Fi'],
+    description: 'A computer hacker learns about the true nature of reality and his role in the war.',
+    popularity: 95,
+    imageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=600&fit=crop',
+  },
+  {
+    id: '5',
+    title: 'Inception',
+    year: 2010,
+    category: 'Movie',
+    genres: ['Action', 'Sci-Fi', 'Thriller'],
+    description: 'A thief who steals corporate secrets through dream-sharing technology.',
+    popularity: 94,
+    imageUrl: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=600&fit=crop',
+  },
+  {
+    id: '6',
+    title: 'Interstellar',
+    year: 2014,
+    category: 'Movie',
+    genres: ['Adventure', 'Drama', 'Sci-Fi'],
+    description: 'A team of explorers travel through a wormhole in space.',
+    popularity: 93,
+    imageUrl: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=600&fit=crop',
+  },
+  {
+    id: '7',
+    title: 'The Shawshank Redemption',
+    year: 1994,
+    category: 'Movie',
+    genres: ['Drama'],
+    description: 'Two imprisoned men bond over a number of years.',
+    popularity: 97,
+    imageUrl: 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&h=600&fit=crop',
+  },
+  {
+    id: '8',
+    title: 'Pulp Fiction',
+    year: 1994,
+    category: 'Movie',
+    genres: ['Crime', 'Drama'],
+    description: 'The lives of two mob hitmen, a boxer, and others intertwine.',
+    popularity: 91,
+    imageUrl: 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=400&h=600&fit=crop',
+  },
+];
+
+export const mockUsers: User[] = [
+  {
+    id: 'user1',
+    name: 'Alex Chen',
+    gender: 'male',
+    occupation: 'Engineer',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+  },
+  {
+    id: 'user2',
+    name: 'Sarah Miller',
+    gender: 'female',
+    occupation: 'Designer',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+  },
+  {
+    id: 'user3',
+    name: 'James Wilson',
+    gender: 'male',
+    occupation: 'Student',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+  },
+];
+
+export const generateRecommendations = (userId: string): Recommendation[] => {
+  return mockItems.slice(0, 6).map((item, index) => ({
+    item,
+    score: 0.95 - index * 0.08,
+    source: index < 2 ? 'hybrid' : index < 4 ? 'svd' : 'content',
+    features: {
+      svdScore: 0.85 - index * 0.05,
+      contentSimilarity: 0.78 - index * 0.06,
+      userItemSimilarity: 0.82 - index * 0.04,
+      popularity: item.popularity / 100,
+      recency: 1 - (2024 - item.year) / 50,
+      demographicMatch: 0.75 + Math.random() * 0.2,
+    },
+  }));
+};
+
+export const modelInfo: ModelInfo[] = [
+  {
+    name: 'svd_sklearn.pkl',
+    type: 'Collaborative Filtering (Matrix Factorization)',
+    description: 'Learns latent user-item preferences from historical interactions',
+    usedIn: ['Personalized Ranking', '/recommend/user/{user_id}'],
+    output: 'Predicted rating score',
+  },
+  {
+    name: 'tfidf_vectorizer.pkl',
+    type: 'Text Feature Extractor (NLP)',
+    description: 'Converts item text (genre, description, tags) → numerical vectors',
+    usedIn: ['Similar Items', 'Cold-start handling'],
+    output: 'TF-IDF feature vectors',
+  },
+  {
+    name: 'item_embeddings.pkl',
+    type: 'Dense Vector Representations (Items)',
+    description: 'Stores numerical meaning of items for fast similarity search',
+    usedIn: ['Similar Items', 'Ranking model features'],
+    output: 'Item embedding vector',
+  },
+  {
+    name: 'user_embeddings.pkl',
+    type: 'User Preference Embeddings',
+    description: 'Encodes long-term user behavior into vectors',
+    usedIn: ['Personalized ranking', 'Cold-start approximation'],
+    output: 'User embedding vector',
+  },
+  {
+    name: 'gender_encoder.pkl',
+    type: 'Categorical Encoder',
+    description: 'Converts gender category → numeric code',
+    usedIn: ['Cold-start onboarding', 'Demographic personalization'],
+    output: 'Encoded gender feature',
+  },
+  {
+    name: 'occupation_encoder.pkl',
+    type: 'Categorical Encoder',
+    description: 'Converts profession → numeric feature',
+    usedIn: ['Cold-start onboarding', 'User profiling'],
+    output: 'Encoded occupation feature',
+  },
+  {
+    name: 'ranking_model.pkl',
+    type: 'Learning-to-Rank / Meta ML Model',
+    description: 'Combines all signals: SVD, content, embeddings, popularity, recency, demographics',
+    usedIn: ['Final recommendation ordering', '/recommend/user/{user_id}'],
+    output: 'Final ranking score',
+  },
+  {
+    name: 'items_metadata.csv',
+    type: 'Data Source',
+    description: 'Contains item info: ID, Title, Category, Year, Popularity score',
+    usedIn: ['UI rendering', 'Filtering', 'Popularity/recency logic'],
+    output: 'Item metadata',
+  },
+];

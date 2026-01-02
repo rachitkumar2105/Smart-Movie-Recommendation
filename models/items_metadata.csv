@@ -1,0 +1,103 @@
+id,title,genres,popularity,year,description,vote_average,vote_count
+1,The Shawshank Redemption,Drama,84.52942990492727,1980,Description for The Shawshank Redemption,7.2462983773302545,294
+2,The Godfather,Crime|Drama,65.28436749018327,1988,Description for The Godfather,5.851610509635329,980
+3,The Dark Knight,Action|Crime|Drama,26.168327199491376,1999,Description for The Dark Knight,8.5122775276272,502
+4,The Godfather Part II,Crime|Drama,37.20731332291662,1995,Description for The Godfather Part II,7.628593256105171,845
+5,12 Angry Men,Drama|Crime,72.57027666979383,1971,Description for 12 Angry Men,7.334010041803696,407
+6,Schindler's List,Biography|Drama|History,86.97485098842674,2020,Description for Schindler's List,5.506967818767333,503
+7,The Lord of the Rings: The Return of the King,Action|Adventure|Drama,11.057631236654377,1982,Description for The Lord of the Rings: The Return of the King,9.088174890428395,530
+8,Pulp Fiction,Crime|Drama,91.9009191584585,2002,Description for Pulp Fiction,5.398824277014543,522
+9,The Lord of the Rings: The Fellowship of the Ring,Action|Adventure|Drama,76.35278576097953,1982,Description for The Lord of the Rings: The Fellowship of the Ring,6.892884851028743,306
+10,"The Good, the Bad and the Ugly",Western,37.32945194536646,2019,"Description for The Good, the Bad and the Ugly",9.7666062743669,148
+11,Forrest Gump,Drama|Romance,24.93637793935404,2013,Description for Forrest Gump,8.67159173288241,552
+12,Fight Club,Drama,39.27963603886278,2023,Description for Fight Club,9.72939896309719,307
+13,The Lord of the Rings: The Two Towers,Action|Adventure|Drama,27.31667582665778,2019,Description for The Lord of the Rings: The Two Towers,9.894896618415327,519
+14,Inception,Action|Adventure|Sci-Fi,82.25209301744832,2007,Description for Inception,5.8263629022007315,220
+15,Star Wars: Episode V - The Empire Strikes Back,Action|Adventure|Fantasy,70.22151717195202,1984,Description for Star Wars: Episode V - The Empire Strikes Back,9.419997307181792,254
+16,The Matrix,Action|Sci-Fi,90.71479448494988,1994,Description for The Matrix,8.439485494867863,820
+17,Goodfellas,Biography|Crime|Drama,18.743583324078383,1998,Description for Goodfellas,8.193542547979789,971
+18,One Flew Over the Cuckoo's Nest,Drama,88.38632023682607,1972,Description for One Flew Over the Cuckoo's Nest,9.889107182179892,614
+19,Se7en,Crime|Drama|Mystery,45.72466460633348,2023,Description for Se7en,6.506345095156759,546
+20,Seven Samurai,Action|Adventure|Drama,86.25399655269536,1991,Description for Seven Samurai,5.171075522540849,379
+21,It's a Wonderful Life,Drama|Family|Fantasy,34.125599611339055,1988,Description for It's a Wonderful Life,7.634751569765315,146
+22,The Silence of the Lambs,Crime|Drama|Thriller,66.91030565624474,1993,Description for The Silence of the Lambs,8.862058930008946,695
+23,City of God,Crime|Drama,23.552185518641302,1983,Description for City of God,7.0058191197750626,235
+24,Saving Private Ryan,Drama|War,28.130389171236185,1987,Description for Saving Private Ryan,9.523299904475454,200
+25,Life Is Beautiful,Comedy|Drama|Romance,91.95627315419443,1974,Description for Life Is Beautiful,8.607311619383292,976
+26,Interstellar,Adventure|Drama|Sci-Fi,64.71722734431458,1982,Description for Interstellar,9.451003899501732,632
+27,The Green Mile,Crime|Drama|Fantasy,78.41682458195802,1995,Description for The Green Mile,5.019522404117863,204
+28,Star Wars,Action|Adventure|Fantasy,61.421265430452934,1978,Description for Star Wars,5.836136590598153,171
+29,Terminator 2: Judgment Day,Action|Sci-Fi,63.55304679344052,1987,Description for Terminator 2: Judgment Day,6.7914484630532606,292
+30,Back to the Future,Adventure|Comedy|Sci-Fi,57.19450352116125,1989,Description for Back to the Future,5.892111572264758,563
+31,Spirited Away,Animation|Adventure|Family,85.68267020492468,1981,Description for Spirited Away,9.85545986500581,819
+32,Psycho,Horror|Mystery|Thriller,10.618233196874892,1991,Description for Psycho,9.473353463178288,347
+33,The Pianist,Biography|Drama|Music,97.15769228091459,2005,Description for The Pianist,7.594887736753752,954
+34,Parasite,Drama|Thriller,24.21790951593249,1970,Description for Parasite,5.286732649541495,453
+35,Léon: The Professional,Action|Crime|Drama,22.552937742520513,2005,Description for Léon: The Professional,9.400022966280787,603
+36,The Lion King,Animation|Adventure|Drama,69.64653564688513,2001,Description for The Lion King,6.985862495918335,290
+37,Gladiator,Action|Adventure|Drama,21.77939189268975,2016,Description for Gladiator,8.277016141159192,920
+38,American History X,Drama,37.10301140475944,2013,Description for American History X,5.26956721331133,191
+39,The Departed,Crime|Drama|Thriller,46.28431296074917,2006,Description for The Departed,7.899299491932053,430
+40,The Usual Suspects,Crime|Mystery|Thriller,66.95723665490836,2013,Description for The Usual Suspects,5.051481413105757,197
+41,The Prestige,Drama|Mystery|Sci-Fi,53.75569801281574,1987,Description for The Prestige,8.58477900918695,571
+42,Casablanca,Drama|Romance|War,46.84584963071426,2022,Description for Casablanca,5.861642202451166,105
+43,Whiplash,Drama|Music,83.02177523985635,1995,Description for Whiplash,6.99568370765624,255
+44,The Intouchables,Biography|Comedy|Drama,42.07974150323155,1981,Description for The Intouchables,6.431706636194346,787
+45,Modern Times,Comedy|Drama|Romance,20.45840154222129,1972,Description for Modern Times,6.567208946756018,972
+46,Once Upon a Time in the West,Western,74.47450496006714,1973,Description for Once Upon a Time in the West,5.196246105637835,799
+47,Hara-Kiri,Action|Drama|Mystery,53.482948794959256,2005,Description for Hara-Kiri,9.266715420328048,663
+48,Grave of the Fireflies,Animation|Drama|War,89.8701023367034,1972,Description for Grave of the Fireflies,5.765311888267315,644
+49,Alien,Horror|Sci-Fi,66.08332165803373,2007,Description for Alien,8.434079350465074,962
+50,Rear Window,Mystery|Thriller,96.3552364713921,1999,Description for Rear Window,8.980883318336181,305
+51,City Lights,Comedy|Drama|Romance,67.86761294739324,1970,Description for City Lights,9.386147963671066,337
+52,Memento,Mystery|Thriller,97.91977883685173,1978,Description for Memento,8.84604108296528,337
+53,Apocalypse Now,Drama|Mystery|War,46.03810364768326,2020,Description for Apocalypse Now,5.1441191875550025,522
+54,Cinema Paradiso,Drama|Romance,66.60934842775508,2017,Description for Cinema Paradiso,7.805416352369567,669
+55,Indiana Jones and the Raiders of the Lost Ark,Action|Adventure,96.74513913232606,2020,Description for Indiana Jones and the Raiders of the Lost Ark,9.180384046670866,511
+56,Django Unchained,Drama|Western,67.76369626559296,1997,Description for Django Unchained,5.237869813218344,469
+57,WALL·E,Animation|Adventure|Family,40.593717146747125,2004,Description for WALL·E,6.954032502498277,278
+58,The Lives of Others,Drama|Thriller,94.83054528053998,2001,Description for The Lives of Others,5.987585405591339,114
+59,Sunset Blvd.,Drama|Film-Noir,61.778076754200114,1991,Description for Sunset Blvd.,5.652424731505984,188
+60,Paths of Glory,Drama|War,81.68950366169435,1970,Description for Paths of Glory,9.546042396991764,454
+61,The Shining,Drama|Horror,35.033955362765276,1988,Description for The Shining,9.301941203643526,924
+62,The Great Dictator,Comedy|Drama|War,26.757616234025765,1999,Description for The Great Dictator,6.352208526851692,985
+63,Avengers: Infinity War,Action|Adventure|Sci-Fi,76.4874420916889,1986,Description for Avengers: Infinity War,6.809961478892043,985
+64,Witness for the Prosecution,Crime|Drama|Mystery,75.52778922656138,1998,Description for Witness for the Prosecution,5.435956743106799,523
+65,Aliens,Action|Adventure|Sci-Fi,36.92075478641273,1996,Description for Aliens,6.036918145556256,292
+66,American Beauty,Drama,90.72100120579306,1998,Description for American Beauty,5.3597090409918815,275
+67,The Dark Knight Rises,Action|Thriller,36.19403624909496,1985,Description for The Dark Knight Rises,5.430564370017546,780
+68,Dr. Strangelove,Comedy|War,67.39011389581816,1988,Description for Dr. Strangelove,6.820821978064337,819
+69,Spider-Man: Into the Spider-Verse,Animation|Action|Adventure,17.31696237010471,1981,Description for Spider-Man: Into the Spider-Verse,8.007261300214221,432
+70,Joker,Crime|Drama|Thriller,64.45029436671194,2020,Description for Joker,8.884220114227553,758
+71,Oldboy,Action|Drama|Mystery,88.80749220067958,2018,Description for Oldboy,9.890668142466582,853
+72,Braveheart,Biography|Drama|History,73.15722967114263,2001,Description for Braveheart,8.240156901603605,655
+73,Amadeus,Biography|Drama|History,69.29896122100124,2002,Description for Amadeus,9.074672644875205,803
+74,Toy Story,Animation|Adventure|Comedy,16.25875001372274,1979,Description for Toy Story,7.698659273439462,481
+75,Coco,Animation|Adventure|Family,42.734386375460396,1997,Description for Coco,6.2561745972832234,340
+76,Inglourious Basterds,Adventure|Drama|War,89.93288454699825,2015,Description for Inglourious Basterds,8.348348446192363,550
+77,The Boat,Drama|War,14.290413027132432,1993,Description for The Boat,8.2540474502174,678
+78,Avengers: Endgame,Action|Adventure|Drama,93.35474633211547,2004,Description for Avengers: Endgame,5.15410974171415,841
+79,Princess Mononoke,Animation|Adventure|Fantasy,71.7373236223493,1987,Description for Princess Mononoke,8.303442044022091,285
+80,Good Will Hunting,Drama|Romance,65.19216144564714,2014,Description for Good Will Hunting,8.235948031166402,676
+81,Toy Story 3,Animation|Adventure|Comedy,91.63608421037421,1983,Description for Toy Story 3,5.928802210448115,555
+82,Requiem for a Dream,Drama,47.88594241254662,1981,Description for Requiem for a Dream,5.28995329992218,481
+83,3 Idiots,Comedy|Drama,99.84716653563267,1977,Description for 3 Idiots,6.601328541675699,817
+84,Your Name.,Animation|Drama|Fantasy,53.36864416451374,2004,Description for Your Name.,8.499976424770272,903
+85,Singin' in the Rain,Comedy|Musical|Romance,67.53223677091569,2013,Description for Singin' in the Rain,5.6046169092601925,404
+86,Star Wars: Episode VI - Return of the Jedi,Action|Adventure|Fantasy,30.78999470206239,2002,Description for Star Wars: Episode VI - Return of the Jedi,8.001927919842487,305
+87,Reservoir Dogs,Crime|Drama|Thriller,16.01532644306279,1978,Description for Reservoir Dogs,8.59916433492638,397
+88,Eternal Sunshine of the Spotless Mind,Drama|Romance|Sci-Fi,86.98255349966409,2020,Description for Eternal Sunshine of the Spotless Mind,7.7663985243619695,883
+89,2001: A Space Odyssey,Adventure|Sci-Fi,91.84546589170621,2000,Description for 2001: A Space Odyssey,9.466223891417641,978
+90,Citizen Kane,Drama|Mystery,43.342670905155266,1996,Description for Citizen Kane,7.5692467144804425,443
+91,Lawrence of Arabia,Adventure|Biography|Drama,32.40480947033866,1993,Description for Lawrence of Arabia,8.7164347657919,905
+92,M,Crime|Mystery|Thriller,54.10524352495723,2009,Description for M,7.687195641462818,425
+93,North by Northwest,Action|Adventure|Mystery,58.57781700639149,1994,Description for North by Northwest,5.3892903130479946,117
+94,Vertigo,Mystery|Romance|Thriller,68.51741855077228,1980,Description for Vertigo,7.569507489398118,572
+95,Amélie,Comedy|Romance,54.832804133577056,1980,Description for Amélie,5.466786167887805,927
+96,A Clockwork Orange,Crime|Drama|Sci-Fi,67.73129252202537,1984,Description for A Clockwork Orange,6.20843069304698,111
+97,Double Indemnity,Crime|Drama|Film-Noir,80.4301678224655,1988,Description for Double Indemnity,6.370461750797866,207
+98,Full Metal Jacket,Drama|War,70.19122249893208,1975,Description for Full Metal Jacket,6.490493603067629,282
+99,Scarface,Crime|Drama,80.84393931715039,1992,Description for Scarface,6.404229933194901,337
+100,Hamilton,Biography|Drama|History,35.85768594240878,1995,Description for Hamilton,6.507787165300681,515
+101,The Sting,Comedy|Crime|Drama,36.28516809140435,1997,Description for The Sting,5.826469592286847,559
+102,To Kill a Mockingbird,Crime|Drama,40.23376914724996,1998,Description for To Kill a Mockingbird,8.70219643437804,405
