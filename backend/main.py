@@ -171,6 +171,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.on_event("startup")
 async def startup_event():
     """Load all models when the server starts"""
     models.load_all()
@@ -181,8 +182,12 @@ async def startup_event():
 # Note: In production, the "dist" folder must exist (created by npm run build)
 static_dir = Path(__file__).parent.parent / "dist"
 
+print(f"DEBUG: Static directory path: {static_dir.absolute()}")
 if static_dir.exists():
+    print(f"DEBUG: Static directory exists. Mounting...")
     app.mount("/assets", StaticFiles(directory=static_dir / "assets"), name="assets")
+else:
+    print(f"DEBUG: Static directory DOES NOT exist. Frontend will not be served.")
 
 # Catch-all route to serve index.html for client-side routing
 @app.exception_handler(404)

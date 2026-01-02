@@ -51,7 +51,7 @@ export const api = {
 
     async getHealth(): Promise<any> {
         try {
-            const response = await fetch(`${API_BASE_url}/`);
+            const response = await fetch(`${API_BASE_url}/api/health`);
             return response.json();
         } catch (e) {
             console.error('API Health Check Failed', e);
