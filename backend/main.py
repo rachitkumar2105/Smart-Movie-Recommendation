@@ -12,6 +12,8 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -169,10 +171,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.on_event("startup")
 async def startup_event():
     """Load all models when the server starts"""
     models.load_all()
+
+# ============= Static Files (Frontend) =============
+
+# Mount the static files directory (the built React app)
+# Note: In production, the "dist" folder must exist (created by npm run build)
+static_dir = Path(__file__).parent.parent / "dist"
+
+if static_dir.exists():
+    app.mount("/assets", StaticFiles(directory=static_dir / "assets"), name="assets")
+
+# Catch-all route to serve index.html for client-side routing
+@app.exception_handler(404)
+async def custom_404_handler(_, __):
+    if static_dir.exists():
+        return FileResponse(static_dir / "index.html")
+    return {"error": "Frontend not found (dist folder missing)"}
+
+# Also serve root explicitly if needed, but the 404 handler covers mostly everything for SPA
+# However, it's better to have a dedicated root handler if not conflicting with API
+# Since we have @app.get("/") as health check, we might want to move health check to /api/health
+# But strictly following the USER request to keep it simple:
+
+# Let's Move the health check to /api/health and serve index.html at /
+
 
 # ============= Helper Functions =============
 
@@ -308,12 +333,23 @@ def determine_source(features: dict) -> str:
 
 # ============= API Endpoints =============
 
-@app.get("/")
-async def root():
+@app.get("/api/health")
+async def health_check():
     """Health check endpoint"""
     return {
         "status": "ok",
         "message": "Intelligent Recommendation Engine API",
+        "models_loaded": models.loaded
+    }
+
+@app.get("/")
+async def root():
+    """Serve the React app (index.html)"""
+    if static_dir.exists():
+        return FileResponse(static_dir / "index.html")
+    return {
+        "status": "ok",
+        "message": "Intelligent Recommendation Engine API (Frontend not built)",
         "models_loaded": models.loaded
     }
 

@@ -1,5 +1,5 @@
 
-export const API_BASE_url = 'http://localhost:8000';
+export const API_BASE_url = import.meta.env.PROD ? '' : 'http://localhost:8000';
 
 export interface ColdStartRequest {
     gender: string;

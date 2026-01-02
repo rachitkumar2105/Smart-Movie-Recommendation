@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smart-movie-recommendation
+    env: python
+    rootDir: .
+    buildCommand: |
+      npm install
+      npm run build
+      pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: NODE_VERSION
+        value: 20.0.0
