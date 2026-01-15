@@ -66,14 +66,14 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold">
-              <span className="gradient-text">Smart Movie</span>
+              <span className="gradient-text">Discover Your Next</span>
               <br />
-              Recommendations
+              Favorite Movie
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Industry-grade ML pipeline combining collaborative filtering, content-based signals,
-              and learning-to-rank models for personalized recommendations.
+              Personalized movie suggestions tailored to your unique taste.
+              Finding something to watch has never been easier.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -83,49 +83,42 @@ export default function Index() {
                 onClick={() => document.getElementById('recommendations')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Sparkles className="h-5 w-5" />
-                Get Recommendations
-              </Button>
-              <Button
-                variant="glass"
-                size="xl"
-                onClick={() => navigate('/models')}
-              >
-                View ML Models
+                Start Exploring
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - Simplified */}
       <section className="py-8 border-y border-border/50 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <PerformanceCard
-              label="Recommended Items"
-              value="6,479"
+              label="Movies Available"
+              value="6,000+"
               icon={<Box className="h-5 w-5" />}
               variant="default"
             />
             <PerformanceCard
-              label="Personalized"
-              value="67.43%"
-              subtext="4,369 items"
+              label="Personalized Matches"
+              value="4,000+"
+              subtext="Just for you"
               icon={<Users className="h-5 w-5" />}
               variant="primary"
             />
             <PerformanceCard
-              label="Non-personalized"
-              value="32.57%"
-              subtext="2,110 items"
+              label="Trending Items"
+              value="2,000+"
+              subtext="Popular right now"
               icon={<TrendingUp className="h-5 w-5" />}
               variant="secondary"
             />
             <PerformanceCard
-              label="Catalog Usage"
-              value="9.97%"
-              subtext="177 from 1,775"
-              icon={<Sparkles className="h-5 w-5" />}
+              label="Happy Users"
+              value="98%"
+              subtext="Satisfaction rate"
+              icon={<Heart className="h-5 w-5" />}
               variant="success"
             />
           </div>
@@ -135,17 +128,28 @@ export default function Index() {
       {/* Main Content */}
       <main id="recommendations" className="container mx-auto px-4 py-12 space-y-12">
         {/* User Selector */}
-        <UserSelector
-          users={mockUsers}
-          selectedUserId={selectedUserId}
-          onSelect={setSelectedUserId}
-        />
+        <div className="flex justify-between items-center">
+          <UserSelector
+            users={mockUsers}
+            selectedUserId={selectedUserId}
+            onSelect={setSelectedUserId}
+          />
+          {/* Hidden technical button, maybe keep it but simpler? No, let's just direct link if needed elsewhere, or keep it subtle */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-muted-foreground"
+            onClick={() => navigate('/models')}
+          >
+            Tech Specs
+          </Button>
+        </div>
 
         {/* Recommended For You */}
         {(selectedUserId || location.state?.coldStartRecommendations) && (
           <RecommendationSection
             title={location.state?.coldStartRecommendations ? "Matches for Your Preferences" : "Recommended For You"}
-            subtitle={location.state?.coldStartRecommendations ? "Demographics + Interest Match" : "SVD + embeddings + ranking model"}
+            subtitle={location.state?.coldStartRecommendations ? "Based on your choices" : "Curated selections based on your taste"}
             icon={<Sparkles className="h-5 w-5" />}
             onViewAll={() => { }}
           >
@@ -175,7 +179,7 @@ export default function Index() {
         {/* Trending Now */}
         <RecommendationSection
           title="Trending Now"
-          subtitle="Popularity + recency (no ML)"
+          subtitle="What everyone is watching right now"
           icon={<TrendingUp className="h-5 w-5" />}
           onViewAll={() => { }}
         >
@@ -195,7 +199,7 @@ export default function Index() {
         {selectedUserId && (
           <RecommendationSection
             title="Because You Liked 'The Matrix'"
-            subtitle="Content similarity + collaborative score"
+            subtitle="Movies with similar themes and style"
             icon={<Heart className="h-5 w-5" />}
             onViewAll={() => { }}
           >
@@ -219,8 +223,8 @@ export default function Index() {
       {/* Footer */}
       <footer className="border-t border-border/50 py-8 mt-12">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Intelligent Recommendation Engine • Industry-Grade ML Pipeline</p>
-          <p className="mt-1">Using SVD, TF-IDF, Embeddings, and Learning-to-Rank models</p>
+          <p>© 2024 Intelligent Recommendation Engine</p>
+          <p className="mt-1">Powered by Advanced Machine Learning</p>
         </div>
       </footer>
     </div>

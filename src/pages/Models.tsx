@@ -35,11 +35,11 @@ export default function Models() {
         {/* Header */}
         <div className="space-y-4 animate-fade-in">
           <h1 className="text-3xl md:text-4xl font-bold">
-            <span className="gradient-text">ML Models</span> Overview
+            <span className="gradient-text">Technology</span> Overview
           </h1>
           <p className="text-muted-foreground max-w-2xl">
-            This project uses a hybrid recommendation system with 8 trained models working together. 
-            The <code className="text-primary">ranking_model.pkl</code> combines all signals for final recommendations.
+            We use advanced AI to understand your taste and find the perfect movie for you.
+            Here's a look at how our recommendation engine works.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Models() {
             <Cpu className="h-5 w-5 text-primary" />
             How Everything Works Together
           </h2>
-          
+
           <div className="overflow-x-auto">
             <div className="flex items-center gap-3 min-w-max py-4">
               {/* Step 1 */}
@@ -58,42 +58,42 @@ export default function Models() {
                 <p className="font-mono text-sm text-primary">user_id</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 2 */}
               <div className="glass-card p-4 text-center min-w-[140px]">
                 <p className="text-xs text-muted-foreground mb-1">SVD Model</p>
                 <p className="font-mono text-sm">rating score</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 3 */}
               <div className="glass-card p-4 text-center min-w-[140px]">
                 <p className="text-xs text-muted-foreground mb-1">Embeddings</p>
                 <p className="font-mono text-sm">similarity</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 4 */}
               <div className="glass-card p-4 text-center min-w-[140px]">
                 <p className="text-xs text-muted-foreground mb-1">TF-IDF</p>
                 <p className="font-mono text-sm">content</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 5 */}
               <div className="glass-card p-4 text-center min-w-[140px]">
                 <p className="text-xs text-muted-foreground mb-1">Encoders</p>
                 <p className="font-mono text-sm">demographics</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 6 */}
               <div className="glass-card p-4 text-center min-w-[140px] border-primary glow-primary">
                 <p className="text-xs text-primary mb-1">Ranking Model</p>
                 <p className="font-mono text-sm text-primary font-bold">final score</p>
               </div>
               <ArrowRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              
+
               {/* Step 7 */}
               <div className="glass-card p-4 text-center min-w-[140px] border-score-high bg-score-high/10">
                 <p className="text-xs text-score-high mb-1">Output</p>

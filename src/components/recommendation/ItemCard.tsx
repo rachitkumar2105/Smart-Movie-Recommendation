@@ -27,9 +27,9 @@ const genreToVariant: Record<string, 'action' | 'comedy' | 'drama' | 'romance' |
 };
 
 const sourceLabels: Record<string, string> = {
-  hybrid: 'Hybrid Model',
-  svd: 'Collaborative',
-  content: 'Content-Based',
+  hybrid: 'Top Pick',
+  svd: 'Community Favorite',
+  content: 'Similar Style',
   trending: 'Trending',
 };
 
@@ -41,7 +41,7 @@ export function ItemCard({ recommendation, item: directItem, showScore = true, c
   const source = recommendation?.source;
 
   return (
-    <div 
+    <div
       className={cn(
         'group glass-card glass-card-hover overflow-hidden animate-slide-up opacity-0',
         className
@@ -56,15 +56,15 @@ export function ItemCard({ recommendation, item: directItem, showScore = true, c
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-80" />
-        
+
         {/* Score Badge */}
         {showScore && score !== undefined && (
           <div className="absolute top-3 right-3">
             <div className={cn(
               'flex items-center gap-1.5 px-2 py-1 rounded-lg backdrop-blur-md border',
-              score >= 0.8 
-                ? 'bg-score-high/20 border-score-high/30 text-score-high' 
-                : score >= 0.6 
+              score >= 0.8
+                ? 'bg-score-high/20 border-score-high/30 text-score-high'
+                : score >= 0.6
                   ? 'bg-score-medium/20 border-score-medium/30 text-score-medium'
                   : 'bg-score-low/20 border-score-low/30 text-score-low'
             )}>
@@ -102,8 +102,8 @@ export function ItemCard({ recommendation, item: directItem, showScore = true, c
         {/* Genres */}
         <div className="flex flex-wrap gap-1.5">
           {item.genres.slice(0, 3).map((genre) => (
-            <Badge 
-              key={genre} 
+            <Badge
+              key={genre}
               variant={genreToVariant[genre] || 'outline'}
               className="text-[10px]"
             >

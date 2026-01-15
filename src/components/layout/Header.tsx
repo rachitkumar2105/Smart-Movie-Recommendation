@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
   { path: '/explore', label: 'Explore', icon: Compass },
-  { path: '/models', label: 'ML Models', icon: Cpu },
-  { path: '/onboard', label: 'Cold Start', icon: User },
+  { path: '/models', label: 'Technology', icon: Cpu },
+  { path: '/onboard', label: 'My Preferences', icon: User },
 ];
 
 export function Header() {
